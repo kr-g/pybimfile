@@ -37,6 +37,12 @@ a list of change records is stored as continuously stream after header
 - the default can be changed by creating `BeforeImageFile` with a different `link_size`
 - 
 
+# remarks
+
+this module is derived (refactored) from another tool by myself named `LargeFileGuard` in 
+[`pyfileguard`](https://github.com/kr-g/pyfileguard) and intendend to be used together with
+[`pyheapfile`](https://github.com/kr-g/pyheapfile/) related software modules
+
 
 # Platform
 
