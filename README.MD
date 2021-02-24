@@ -4,7 +4,8 @@
 
 # pybimfile - before image file (BIM File) - copy on write
 
-`pybimfile` implements [`copy-on-write`](https://en.wikipedia.org/wiki/Copy-on-write)
+`pybimfile` implements [`copy-on-write`](https://en.wikipedia.org/wiki/Copy-on-write) 
+for file based resources
 
 before a change to a file is written all changes are recorded in another file.
 
@@ -17,7 +18,7 @@ before a change to a file is written all changes are recorded in another file.
 | --- | --- | --- | 
 | blen | xpos | original size of file prior changes |
 | mark | xpos | 0xdeafbeef as start marker |
-| magick | 4 | 0xdeafbeef as magick marker |
+| magick | 4 | 0xdeafbeef as magic marker |
 
 ## change record
 
@@ -25,7 +26,7 @@ before a change to a file is written all changes are recorded in another file.
 | --- | --- | --- | 
 | fpos | xpos | pointer to file change |
 | blen | xpos | size of change segment |
-| magick | 4 | 0xdeafbeef as magick marker |
+| magick | 4 | 0xdeafbeef as magic marker |
 
 a list of change records is stored as continuously stream after header
 
